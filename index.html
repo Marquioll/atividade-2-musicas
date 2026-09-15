@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gênero Musical Preferido</title>
+</head>
+<body>
+    <h1>Escolha seu gênero musical preferido</h1>
+
+    <p>1 - Rock</p>
+    <p>2 - Pop</p>
+    <p>3 - Hip Hop</p>
+    <p>4 - Eletrônica</p>
+    <p>5 - Jazz</p>
+    <p>6 - Clássica</p>
+
+    <button onclick="escolherMusica()">Escolher música</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function escolherMusica() {
+            let opcao = prompt(
+                "Digite o número do seu gênero favorito:\n" +
+                "1 - Rock\n" +
+                "2 - Pop\n" +
+                "3 - Hip Hop\n" +
+                "4 - Eletrônica\n" +
+                "5 - Jazz\n" +
+                "6 - Clássica"
+            );
+
+            let genero;
+
+            switch (opcao) {
+                case "1":
+                    genero = "Rock";
+                    break;
+
+                case "2":
+                    genero = "Pop";
+                    break;
+
+                case "3":
+                    genero = "Hip Hop";
+                    break;
+
+                case "4":
+                    genero = "Eletrônica";
+                    break;
+
+                case "5":
+                    genero = "Jazz";
+                    break;
+
+                case "6":
+                    genero = "Clássica";
+                    break;
+
+                default:
+                    document.getElementById("resultado").textContent =
+                        "Opção inválida! Digite um número de 1 a 6.";
+                    return;
+            }
+
+            document.getElementById("resultado").textContent =
+                "Seu gênero musical preferido é: " + genero;
+        }
+    </script>
+</body>
+</html>
